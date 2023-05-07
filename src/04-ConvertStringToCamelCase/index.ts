@@ -10,7 +10,7 @@ export function toCamelCase(str: string) {
   const camelCaseWords = words
     ?.slice(1)
     .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`);
-  const camelCaseStr = `${words[0]}${camelCaseWords.join("")}`;
+  const camelCaseStr = `${words[0]}${camelCaseWords.join('')}`;
 
   // console.log({ words, camelCaseWords, camelCaseStr });
 

@@ -1,14 +1,15 @@
 export function duplicateCount(text: string) {
-  const result: { [key: string]: number } = {};
+  const result: Record<string, number> = {};
 
-  text.split("").reduce((_: any, current: string) => {
+  text.split('').reduce((_: object, current: string) => {
     const key = String(current).toLowerCase();
 
     if (result[key]) {
-      result[key] = result[key] + 1;
+      result[key] += +1;
     } else {
       result[key] = 1;
     }
+    return result;
   }, {});
 
   const count = Object.values(result).filter((val) => val > 1)?.length || 0;
@@ -17,12 +18,12 @@ export function duplicateCount(text: string) {
 }
 
 export function duplicateCount2(text: string) {
-  return (
-    text
-      .toLowerCase()
-      .split("")
-      .sort()
-      .join("")
-      .match(/([^])\1+/g) || []
-  ).length;
+  const result = text
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('')
+    .match(/([^])\1+/g);
+
+  return result ? result?.length : 0;
 }
