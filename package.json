@@ -7,8 +7,11 @@
   "author": "",
   "license": "ISC",
   "scripts": {
+    "start:dev": "tsx watch src/index.ts",
+    "start": "node build/index.js",
     "build": "tsup src --out-dir build",
     "format": "npx prettier --config .prettierrc --write src/**/*.ts",
+    "format:check": "npx prettier --config .prettierrc --check src/**/*.ts",
     "lint": "npx eslint --fix src/**/*.ts",
     "test": "vitest run",
     "test:watch": "vitest",
