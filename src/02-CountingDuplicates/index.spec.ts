@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { duplicateCount, duplicateCount2 } from '.';
 
 describe('duplicateCount', () => {

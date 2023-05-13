@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { getCountVowel, getCountVowel2 } from '.';
 
 describe('getCountVowel', () => {

@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest';
 import { createPhoneNumber, createPhoneNumber2 } from '.';
 
 describe('createPhoneNumber', () => {
